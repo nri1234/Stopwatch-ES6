@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+body {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+.watch {
+    margin: 0 auto;
+    border: 1px solid #c6d9ec;
+    width: 25%;
+    height: 40vh;
+    background: #c6d9ec;
+}
+.controls {
+    text-align: center;
+    margin: 25px;
+}
+.button {
+    background: #c6d9ec;
+    color: #0d1a26;
+    font-size: 28px;
+    padding: 0 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 35px;
+    font-family: 'Montserrat', sans-serif;
+}
+#stop {
+    color: red;
+}
+.stopwatch {
+    font-size: 58px;
+    color: #ffff;
+    padding: 45px;
+    font-family: 'Montserrat', sans-serif;
+}
