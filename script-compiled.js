@@ -12,7 +12,15 @@ class Stopwatch extends React.Component {
     format(times) {
         return `${pad0(times.minutes)}:${pad0(times.seconds)}:${pad0(Math.floor(times.miliseconds))}`;
     }
-
+    reset() {
+        this.setState({
+            times: {
+                minutes: 0,
+                seconds: 0,
+                miliseconds: 0
+            }
+        });
+    }
     start() {
         if (!this.state.running) {
             this.state.running = true;
@@ -50,13 +58,6 @@ class Stopwatch extends React.Component {
             running: false
         });
         clearInterval(this.watch);
-    }
-    reset() {
-        this.times = {
-            minutes: 0,
-            seconds: 0,
-            miliseconds: 0
-        };
     }
 
     render() {
