@@ -12,15 +12,7 @@ class Stopwatch extends React.Component {
     format(times) {
         return `${pad0(times.minutes)}:${pad0(times.seconds)}:${pad0(Math.floor(times.miliseconds))}`;
     }
-    reset() {
-        this.setState({
-            times: {
-                minutes: 0,
-                seconds: 0,
-                miliseconds: 0
-            }
-        });
-    }
+
     start() {
         if (!this.state.running) {
             this.state.running = true;
@@ -59,7 +51,15 @@ class Stopwatch extends React.Component {
         });
         clearInterval(this.watch);
     }
-
+    restart() {
+        this.setState({
+            running: false,
+            minutes: 0,
+            seconds: 0,
+            miliseconds: 0
+        });
+        clearInterval(this.watch);
+    }
     render() {
         return React.createElement(
             "div",
@@ -88,6 +88,18 @@ class Stopwatch extends React.Component {
                         }
                     },
                     "Stop"
+                ),
+                React.createElement(
+                    "a",
+                    {
+                        href: "#",
+                        className: "button",
+                        id: "restart",
+                        onClick: () => {
+                            this.restart();
+                        }
+                    },
+                    "Reset"
                 )
             ),
             React.createElement(

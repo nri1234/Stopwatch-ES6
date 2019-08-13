@@ -8,12 +8,14 @@ body {
     margin: 0 auto;
     border: 1px solid #c6d9ec;
     width: 25%;
-    height: 40vh;
+    height: auto;
     background: #c6d9ec;
 }
 .controls {
     text-align: center;
     margin: 25px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .button {
     background: #c6d9ec;
@@ -27,6 +29,10 @@ body {
 }
 #stop {
     color: red;
+    margin-left: 20%;
+}
+#restart {
+    margin: 0 auto;
 }
 .stopwatch {
     font-size: 58px;
